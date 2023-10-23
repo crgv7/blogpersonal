@@ -48,6 +48,7 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem 'ruby-vips', '~> 2.2'
 
+gem 'pg', '~> 1.5', '>= 1.5.4'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
