@@ -1,0 +1,32 @@
+<div class="row flex-column flex-sm-row">
+
+ <header class="masthead" style="background-image:url('<%= asset_path('header.jpg') %>'); height: 400px;">
+        <div class="overlay"></div>
+        <div class="container text-center mt-5 pt-5" style="height: 400px;">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading text-light">
+                        <h1 class=""> TecnoTips</h1>
+                        <span class="mt-5"> "Una máquina puede hacer el trabajo de cincuenta hombres ordinarios. Ninguna máquina puede hacer el trabajo de un hombre extraordinario"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<div class="col-lg-6">
+<h1 class="m-5">Lista de articulos</h1>
+
+<%= render  @articles %>
+</div>
+
+
+<div class="col-6">
+<h2 class="m-5 text-center"> Categorias</h2>
+
+<%= render @categories%>
+
+</div>
+
+</div>

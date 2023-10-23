@@ -1,0 +1,41 @@
+
+<div class="container m-5">
+<%=form_with(model:@article, local:true) do |form| %>
+
+<div>
+    <%=form.label :tittle%>
+    <%=form.text_field :tittle%>
+
+</div>
+
+<div class="mt-2"> 
+    <%=form.label :category_elements %>
+    <div class="row">
+        <% @categories.each do |category| %>
+
+        <label class="col-6 col-sm-3">
+            <%= form.check_box :category_elements, {multiple: true}, category.id, nil%>
+            <%= category.title%>
+        </label>
+        
+        <% end %>
+    </div>
+</div>
+
+
+
+<div class="mt-2">
+<%=form.label :content %>
+<%=form.rich_text_area :content %>
+</div>
+
+
+<div>
+    <%= form.submit %>
+</div>
+
+<%end%>
+
+
+
+</div>

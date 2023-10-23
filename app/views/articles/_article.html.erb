@@ -1,0 +1,21 @@
+<div class="container m-3">
+<div class="card p-5 shadow rounded">
+    <h3 class="text-uppercase"><%= article.tittle %></h3>
+    <p class="text-secondary"><%= article.created_at.strftime('%d/%m/%Y') %></p>
+ <div class="d-flex">  
+  <% article.categories.each do |category| %>
+
+  <span class="badge badge-pill padding m-1" style="background-color: <%= category.color%>; width: 40px;">
+    <%= link_to  category.title, category, class:"text-white" %>
+  </span>  
+
+
+  <% end %>
+</div>  
+<div class="m-2">
+<%= link_to  "ver mas", article_path(article)  %>
+</div>
+    
+</div>
+
+</div>

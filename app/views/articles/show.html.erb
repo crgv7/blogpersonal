@@ -1,0 +1,50 @@
+<div class="container text-center"> 
+<h1 class="m-5"><%=@article.tittle %></h1>
+
+<div class="m-5">
+	<%=@article.content %>
+</div>
+
+<div>
+  <p class="label"> Tags</p>
+  <% @article.categories.each do |category| %>
+  <span class="badge badge-pill padding" style="background-color: <%= category.color%> ;">
+    <%= link_to  category.title, category, class:"text-white" %>
+  </span>  
+  <% end %>
+
+</div>
+
+
+<% if user_signed_in? %>
+
+
+<div>
+
+
+
+
+</div>
+
+<div class="row mt-4">
+
+  <span> 	<%= link_to  "Eliminar", article_path(@article),data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  },class: "btn btn-danger w-25" %> </span>
+</div>
+<div class="row mt-3 mb-5">
+    <span">
+	<%= link_to  "Editar", edit_article_path(@article), class:"btn btn-warning w-25" %>  
+</span>
+   </div>
+
+                
+</div>
+  
+<% end %>
+
+
+
+
+</div>
